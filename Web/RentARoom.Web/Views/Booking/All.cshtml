@@ -1,27 +1,25 @@
 ﻿@model RentARoom.Web.ViewModels.Hotels.HotelListViewModel
-@{
-    this.ViewData["Title"] = "All Hotel, page" + Model.PageNumber  ;
-}
+@{ this.ViewData["Title"] = "All Hotel, page" + Model.PageNumber; }
 
 <h1>@this.ViewData["Title"]</h1>
 
 <div class="row">
     @foreach (var hotel in this.Model.Hotels)
     {
-        <div class="col-md-6 col-lg-4 col-xxl-3 p-3">
-            <div class="component">
-                <div class="card">
-                    <img src="@hotel.ImageUrl" class="card-img-top" width="100">
-                    <div class="card-body">
-                        <h5 class="card-title">@hotel.Name</h5>
-                        <p class="card-text">@hotel.CategoryName</p>
-                        <a asp-action="ById" asp-route-id="@hotel.Id" class="btn btn-primary">View Hotel</a>
-                    </div>
-                </div>
-
+<div class="col-md-6 col-lg-4 col-xxl-3 p-3">
+    <div class="component">
+        <div class="card">
+            <img src="@hotel.ImageUrl" class="card-img-top" width="100">
+            <div class="card-body">
+                <h5 class="card-title">@hotel.Name</h5>
+                <p class="card-text">@hotel.CategoryName</p>
+                <a asp-action="ById" asp-route-id="@hotel.Id" class="btn btn-primary">View Hotel</a>
             </div>
-
         </div>
-    }
-    <hr />
- <partial name="_PagingPartial" model="@Model"/>
+
+    </div>
+
+</div>}
+</div>
+<hr />
+<partial name="_PagingPartial" model="@Model" />
