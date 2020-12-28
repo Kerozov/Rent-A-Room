@@ -2,21 +2,22 @@
 @model RentARoom.Web.ViewModels.Home.IndexViewModel
 @{ this.ViewData["Title"] = "Home Page"; }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
-    <div class="col-md-8">
-        <div class="row">
-            @foreach (var hotel in Model.Hotels)
-            {
-                <div class="card col-md-6 col-lg-4 col-xxl-3 p-3" style="width: 18rem;">
-                    <img src="@hotel.ImageUrl" class="card-img-top" alt="@hotel.Name">
-                    <div class="card-body">
-                        <h5 class="card-title">@hotel.Name</h5>
-                        <p class="card-text">@hotel.CategoryName</p>
-                        <a asp-controller="Booking" asp-action="ById" asp-route-id="@hotel.Id" class="btn btn-primary">Take a look</a>
-                    </div>
+    <h1 class="display-4 text-center">Welcome to @GlobalConstants.SystemName!</h1>
+    <div class="row">
+        @foreach (var hotel in this.Model.Hotels)
+        {
+    <div class="col-md-6 col-lg-4 col-xxl-3 p-3">
+        <div class="component">
+            <div class="card">
+                <img src="@hotel.ImageUrl" class="card-img-top" width="100">
+                <div class="card-body">
+                    <h5 class="card-title">@hotel.Name</h5>
+                    <p class="card-text">@hotel.CategoryName</p>
+                    <a asp-controller="Booking" asp-action="ById" asp-route-id="@hotel.Id" class="btn btn-primary">View Hotel</a>
                 </div>
-            }
+            </div>
+
         </div>
+
+    </div>}
     </div>
-</div>

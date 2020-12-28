@@ -98,10 +98,10 @@
             await this.hotelsRepository.SaveChangesAsync();
         }
 
-        public IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 12)
+        public IEnumerable<T> GetMostPopular<T>(int page, int itemsPerPage = 12)
         {
             var hotels = this.hotelsRepository.AllAsNoTracking()
-                  .OrderByDescending(x => x.Id)
+                  .OrderByDescending(x => x.Votes.Average(x => x.Value))
                   .Skip((page - 1) * itemsPerPage).Take(itemsPerPage)
                   .To<T>()
                   .ToList();

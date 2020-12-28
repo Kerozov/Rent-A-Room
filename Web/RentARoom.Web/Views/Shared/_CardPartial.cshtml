@@ -1,1 +1,20 @@
-﻿
+﻿@model RentARoom.Web.ViewModels.Hotels.HotelListViewModel
+
+<div class="row">
+    @foreach (var hotel in this.Model.Hotels)
+    {
+<div class="col-md-6 col-lg-4 col-xxl-3 p-3">
+    <div class="component">
+        <div class="card">
+            <img src="@hotel.ImageUrl" class="card-img-top" width="100">
+            <div class="card-body">
+                <h5 class="card-title">@hotel.Name</h5>
+                <p class="card-text">@hotel.CategoryName</p>
+                <a asp-action="ById" asp-route-id="@hotel.Id" class="btn btn-primary">View Hotel</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>}
+</div>

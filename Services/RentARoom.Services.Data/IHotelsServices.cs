@@ -12,7 +12,7 @@
     {
         Task CreateAsync(Web.ViewModels.Hotels.AddHotelsInputViewModel input, string userId, string imagePath);
 
-        IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 12);
+        IEnumerable<T> GetMostPopular<T>(int page, int itemsPerPage = 12);
 
         IEnumerable<T> GetRandom<T>(int count);
 

@@ -1,0 +1,8 @@
+﻿@model RentARoom.Web.ViewModels.Hotels.HotelListViewModel
+@{ this.ViewData["Title"] = "Best rating hotel"; }
+
+<h1 class="mb-4 text-center">@this.ViewData["Title"]</h1>
+
+<partial name="_CardPartial" model="@Model" />
+<hr />
+<partial name="_PagingPartial" model="@Model" />

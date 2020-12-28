@@ -70,7 +70,7 @@
             return this.View();
         }
 
-        public IActionResult All(int id = 1)
+        public IActionResult MostPopular(int id = 1)
         {
             const int itemsPerPage = 12;
 
@@ -79,7 +79,7 @@
                 ItemsPerPage = itemsPerPage,
                 PageNumber = id,
                 HotelsCount = this.hotelsServices.GetCount(),
-                Hotels = this.hotelsServices.GetAll<HotelInListViewModel>(id, itemsPerPage),
+                Hotels = this.hotelsServices.GetMostPopular<HotelInListViewModel>(id, itemsPerPage),
             };
             return this.View(viewModel);
         }
