@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-RentARoom-BBB373B5-EF3F-4DBB-B8AA-7152CEC275BF</UserSecretsId>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
+    <OutputType>WinExe</OutputType>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\ErrorPage404-03.eps" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.1" />
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.113" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.205" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\RentARoom.Common\RentARoom.Common.csproj" />
+    <ProjectReference Include="..\..\Data\RentARoom.Data.Models\RentARoom.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\RentARoom.Data\RentARoom.Data.csproj" />
+    <ProjectReference Include="..\..\Services\RentARoom.Services.Data\RentARoom.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Services\RentARoom.Services.Mapping\RentARoom.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\Services\RentARoom.Services.Messaging\RentARoom.Services.Messaging.csproj" />
+    <ProjectReference Include="..\..\Services\RentARoom.Services\RentARoom.Services.csproj" />
+    <ProjectReference Include="..\RentARoom.Web.Infrastructure\RentARoom.Web.Infrastructure.csproj" />
+    <ProjectReference Include="..\RentARoom.Web.ViewModels\RentARoom.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Administration\Views\Dashboard\" />
+  </ItemGroup>
+</Project>

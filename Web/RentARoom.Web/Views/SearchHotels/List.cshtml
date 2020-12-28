@@ -1,0 +1,20 @@
+﻿@model RentARoom.Web.ViewModels.SearchHotels.ListViewModel
+
+@{
+    ViewData["Title"] = "Search result";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    @foreach (var hotel in Model.Hotels)
+    {
+        <div class="card col-md-3" style="width: 18rem;">
+            <img src="@hotel.ImageUrl" class="card-img-top" alt="@hotel.Name">
+            <div class="card-body">
+                <h5 class="card-title">@hotel.Name</h5>
+                <p class="card-text">@hotel.CategoryName</p>
+                <a asp-controller="Booking" asp-action="ById" asp-route-id="@hotel.Id" class="btn btn-primary">Take a look</a>
+            </div>
+        </div>
+    }
+</div>

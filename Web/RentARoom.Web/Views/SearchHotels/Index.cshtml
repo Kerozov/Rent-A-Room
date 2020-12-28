@@ -1,0 +1,29 @@
+﻿@model RentARoom.Web.ViewModels.SearchHotels.SearchIndexViewModel
+@{
+    ViewData["Title"] = "Search hotels by services";
+}
+<h1>@ViewData["Title"]</h1>
+@if (!Model.Services.Any())
+{
+<p> Nothing found.</p>
+}
+else
+{
+<form asp-action="List" method="get">
+    <div class="row">
+        @foreach (var service in Model.Services)
+        {
+            <div class="col-1 text-center">
+                <input id="service_@service.Id"
+                       type="checkbox"
+                       name="Services"
+                       value="@service.Id"
+                       class="form-control" />
+                <label for="service_@service.Id">@service.Name</label>
+            </div>
+        }
+    </div>
+
+    <button class="btn btn-primary">Search</button>
+</form>
+}

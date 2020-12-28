@@ -1,0 +1,155 @@
+﻿
+@using RentARoom.Common
+@model RentARoom.Web.ViewModels.Hotels.SingleHotelViewModel;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>@ViewData["Title"]</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="~/js/maxheight.js"></script>
+    <link href="~/css/layout.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body id="page1" onload="new ElementMaxHeight();">
+    <div id="main">
+        <div id="header">
+            <div class="row-2">
+                <div class="indent">
+                    <!-- header-box begin -->
+                    <div class="header-box">
+                        <img class="custom-image" src="@Model.ImageUrl" alt="@Model.Name" />
+                        <div class="inner">
+                            <ul class="nav">
+                                <li><a href="index.html" class="current">Home page</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a asp-controller="Reservation" asp-action="New" asp-route-id="@Model.Id">Booking</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- header-box end -->
+                </div>
+            </div>
+
+        </div>
+        <div id="content">
+            <div class="wrapper">
+                <div class="aside maxheight">
+                    <!-- box begin -->
+                    <div class="box maxheight">
+                        <div class="inner">
+                            <h3>Reservation:</h3>
+                            <form action="#" id="reservation-form">
+                                <fieldset>
+                                    <div class="field">
+                                        <label>Check In:</label>
+                                        <select class="select1">
+                                            <option>30</option>
+                                        </select>
+                                        <select class="select2">
+                                            <option>April 2009</option>
+                                        </select>
+                                    </div>
+                                    <div class="field">
+                                        <label>Check Out:</label>
+                                        <select class="select1">
+                                            <option>01</option>
+                                        </select>
+                                        <select class="select2">
+                                            <option>May 2009</option>
+                                        </select>
+                                    </div>
+                                    <div class="field">
+                                        Persons: &nbsp;
+                                        <input type="text" value="1" />
+                                        &nbsp; &nbsp; &nbsp; &nbsp; Rooms:&nbsp;
+                                        <input type="text" value="1" />
+                                    </div>
+                                    <div class="button"><span><span><a href="#">Check Availability</a></span></span></div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- box end -->
+                </div>
+                <div class="content">
+                    <div class="indent">
+                        <h2>@Model.Name is happy to welcome you!</h2>
+                        <img class="img-indent png" alt="" src="images/1page-img1.png" />
+                        <p class="alt-top">@Model.Description</p>
+                        Feel free to contact us anytime in case you have any questions or concerns.
+                        <div class="clear"></div>
+                        <div class="line-hor"></div>
+                        <div class="wrapper line-ver">
+                            <div class="col-1">
+                                <h3>Special Offers</h3>
+                                <ul>
+                                    @foreach (var service in Model.Services)
+                                    {
+                                        <li>
+                                            @service.ServiceName
+                                        </li>
+                                    }
+
+                                </ul>
+                            </div>
+                            <div class="col-2">
+                                <h3>Location</h3>
+                                <p>We are located in the @Model.Town</p>
+                                <dl class="contacts-list">
+                                    <dt>@Model.Address</dt>
+                                </dl>
+                            </div>
+                            <div class="rating">
+                                <ul class="item-rating">
+                                    <li class="star-fill" data-vote="1"><i class="fas fa-star"></i></li>
+                                    <li class="star-fill" data-vote="2"><i class="fas fa-star"></i></li>
+                                    <li class="star-fill" data-vote="3"><i class="fas fa-star"></i></li>
+                                    <li class="star-fill" data-vote="4"><i class="fas fa-star"></i></li>
+                                    <li class="star-fill" data-vote="5"><i class="fas fa-star"></i></li>
+                                    <li><span id="averageVoteValue">@Model.AverageVote.ToString("0.0")</span><span> / 5</span> </li>
+                                </ul>
+                            </div>
+                            <div>
+                                @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+                                {
+                                    <a asp-controller="Booking" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+    @*footer*@
+    <script src="~/js/maxheight.js"></script>
+    <form method="post" id="antiForgeryForm"></form>
+    @section Scripts {
+        <script>
+        $("li[data-vote]").each(function (el) {
+            $(this).click(function () {
+                var value = $(this).attr("data-vote");
+                var hotelId = @Model.Id;
+                var antiForgeryToken = $('#antiForgeryForm input[name=__RequestVerificationToken]').val();
+                var data = { hotelId: hotelId, value: value };
+                $.ajax({
+                    type: "POST",
+                    url: "/api/Votes",
+                    data: JSON.stringify(data),
+                    headers: {
+                        'X-CSRF-TOKEN': antiForgeryToken
+                    },
+                    success: function (data) {
+                        $('#averageVoteValue').html(data.averageVote.toFixed(1));
+                    },
+                    contentType: 'application/json',
+                });
+            })
+        });
+        </script>
+    }
+</body>
+</html>
