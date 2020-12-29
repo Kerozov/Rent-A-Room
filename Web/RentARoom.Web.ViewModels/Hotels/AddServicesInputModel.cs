@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Text;
 
     using RentARoom.Data.Models;
@@ -9,6 +10,8 @@
 
     public class HotelServicesInputModel
     {
+        [MinLength(4)]
+        [MaxLength(20)]
         public string ServiceName { get; set; }
     }
 }

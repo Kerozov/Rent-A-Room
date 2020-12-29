@@ -25,7 +25,7 @@
 
         [Required]
         [Range(1, 1000)]
-        [Display(Name = "How many bad have in your hotel?")]
+        [Display(Name = "How many bad have in one of your room?")]
         public int Bed { get; set; }
 
         [Required]
