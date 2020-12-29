@@ -22,6 +22,8 @@
 
         Task UpdateAsync(int id, EditHotelInputViewModel input);
 
+        Task DeleteAsync(int id);
+
         IEnumerable<T> GetByServices<T>(IEnumerable<int> serviceIds);
     }
 }

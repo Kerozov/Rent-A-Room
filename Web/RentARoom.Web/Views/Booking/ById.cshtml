@@ -114,6 +114,9 @@
                                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                                 {
                                     <a asp-controller="Booking" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                                    <form method="post" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id">
+                                    </form>
+                                    <button type="submit" class="btn btn-danger" value="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
                                 }
                             </div>
                         </div>
@@ -123,7 +126,7 @@
             </div>
         </div>
     </div>
-   
+
     @*footer*@
     <script src="~/js/maxheight.js"></script>
     <form method="post" id="antiForgeryForm"></form>
@@ -152,4 +155,22 @@
         </script>
     }
 </body>
+
 </html>
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Do you want to delete @Model.Name?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger" onclick="deleteForm.submit()">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>

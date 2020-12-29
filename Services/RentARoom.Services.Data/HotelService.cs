@@ -149,5 +149,12 @@
             hotels.CategoryId = input.CategoryId;
             await this.hotelsRepository.SaveChangesAsync();
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            var hotel = this.hotelsRepository.All().FirstOrDefault(x => x.Id == id);
+            this.hotelsRepository.Delete(hotel);
+            await this.hotelsRepository.SaveChangesAsync();
+        }
     }
 }
