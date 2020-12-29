@@ -34,18 +34,12 @@
       <td align="center" valign="middle"> 
         <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233043/screencapture-localhost-44319-Booking-Edit-7-2020-12-29-11_08_18_ipck2j.png" alt="Edit Hotel Page" />
       </td>
-    </tr>
-    <tr>
       <td align="center" valign="middle"> 
         <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Identity-Account-Manage-2020-12-29-11_09_33_mplsba.png" alt="Manage account Page" />
       </td>
-    </tr>
-    <tr>
        <td align="center" valign="middle"> 
         <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Identity-Account-Login-2020-12-29-11_09_53_lvs0er.png" alt="Login Page" />
       </td>
-    </tr>
-     <tr>
        <td align="center" valign="middle"> 
         <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Reservation-New-7-2020-12-29-11_08_53_wa79mt.png" alt="Booking Page" />
       </td>
