@@ -12,6 +12,7 @@
     using RentARoom.Common;
     using RentARoom.Data.Common.Models;
     using RentARoom.Services.Data;
+    using RentARoom.Web.ViewModels;
     using RentARoom.Web.ViewModels.Hotels;
 
     public class BookingController : Controller
@@ -120,6 +121,13 @@
         {
             await this.hotelsServices.DeleteAsync(id);
             return this.RedirectToAction(nameof(this.MostPopular));
+        }
+
+        public IActionResult Images(int id)
+        {
+            var inputModel = this.hotelsServices.GetById<ImagesHotelViewModel>(id);
+
+            return this.View(inputModel);
         }
     }
 }

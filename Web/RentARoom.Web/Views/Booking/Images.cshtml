@@ -1,0 +1,14 @@
+﻿@model RentARoom.Web.ViewModels.ImagesHotelViewModel
+@{ this.ViewData["Title"] = $"All images on  hotel {Model.Name}!"; }
+
+<h1 class="mb-4 text-center">@this.ViewData["Title"]</h1>
+
+    <img class="custom-image" src="~/images/hotels/e5b70dfd-b769-48d1-a1d4-cbf9aeac542d.jpg" alt="@Model.Name" />
+@foreach (var image in Model.Images)
+{
+
+
+    <img class="custom-image" src="~/images/hotels/@image.Id.@image.Extension" alt="@Model.Name" />
+
+
+}

@@ -1,8 +1,8 @@
-﻿using RentARoom.Data.Models;
-using RentARoom.Services.Mapping;
-
-namespace RentARoom.Web.ViewModels.SearchHotels
+﻿namespace RentARoom.Web.ViewModels.SearchHotels
 {
+    using RentARoom.Data.Models;
+    using RentARoom.Services.Mapping;
+
     public class ServiceNameViewModel : IMapFrom<Service>
     {
         public int Id { get; set; }
