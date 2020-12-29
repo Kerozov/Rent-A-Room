@@ -39,3 +39,7 @@
     object-fit: cover;
     object-position: center;
 }
+
+.color-yellow {
+    color: yellow;
+}
