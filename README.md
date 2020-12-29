@@ -4,35 +4,50 @@
   <tbody>
     <tr>
       <td align="center" valign="middle"> 
-        <img width="450px" src="https://res.cloudinary.com/dxxq5xtsy/image/upload/v1576372203/profile-page_ll4kvu.png" alt="Profile Page" />
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Booking-ById-7-2020-12-29-11_08_02_bypcdf.png" alt="Hotel Page" />
       </td>
       <td align="center" valign="middle"> 
-        <img width="450px" src="https://res.cloudinary.com/dxxq5xtsy/image/upload/v1576372202/private-home-page_crynmr.png" alt="Home Page" />
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Booking-MostPopular-2020-12-29-11_06_42_tlmiwj.png" alt="Best Hotel Page" />
       </td>
       <td align="center" valign="middle"> 
-        <img width="450px" src="https://res.cloudinary.com/dxxq5xtsy/image/upload/v1576372202/guest-home-page_rsqulo.png" alt="Guest Home Page" />
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233043/screencapture-localhost-44319-2020-12-29-11_04_25_ohdi3x.png" alt="Home Page" />
       </td>
        <td align="center" valign="middle"> 
-        <img width="450px" src="https://res.cloudinary.com/dxxq5xtsy/image/upload/v1576372202/gallery_oitukn.png" alt="Gallery Page" />
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Booking-Add-2020-12-29-11_06_56_maozj8.png" alt="Add Hotel Page" />
       </td>
     </tr>
     <tr>
       <td align="center" valign="middle"> 
-        <img width="450px" src="https://res.cloudinary.com/dxxq5xtsy/image/upload/v1576500079/friends_mywxry.png" alt="Friends Page" />
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233045/screencapture-localhost-44319-SearchHotels-List-2020-12-29-11_06_27_n3hk2l.png" alt="Search Result Page" />
       </td>
       <td align="center" valign="middle"> 
-        <img width="450px" src="https://res.cloudinary.com/dxxq5xtsy/image/upload/v1576372202/about_cmimmy.png" alt="About Page" />
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-SearchHotels-2020-12-29-11_05_41_eptbxr.png" alt="Search Page" />
       </td>
        <td align="center" valign="middle"> 
-        <img width="450px" src="https://res.cloudinary.com/dxxq5xtsy/image/upload/v1576372203/search_jpl3jw.png" alt="Search Page" />
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Booking-Images-7-2020-12-29-11_08_41_ee0sov.png" alt="Gallery Page" />
       </td>
       <td align="center" valign="middle"> 
-        <img width="450px" src="https://res.cloudinary.com/dxxq5xtsy/image/upload/v1576417977/comments_bsn85a.png" alt="Comments" />
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233043/screencapture-localhost-44319-Administration-Categories-2020-12-29-11_07_21_rfj56y.png" alt="Admin Page" />
       </td>
     </tr>
     <tr>
       <td align="center" valign="middle"> 
-        <img width="450px" src="https://res.cloudinary.com/dxxq5xtsy/image/upload/v1576417977/photo-modal_rmacce.png" alt="Photo Modal Gallery Page" />
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233043/screencapture-localhost-44319-Booking-Edit-7-2020-12-29-11_08_18_ipck2j.png" alt="Edit Hotel Page" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"> 
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Identity-Account-Manage-2020-12-29-11_09_33_mplsba.png" alt="Manage account Page" />
+      </td>
+    </tr>
+    <tr>
+       <td align="center" valign="middle"> 
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Identity-Account-Login-2020-12-29-11_09_53_lvs0er.png" alt="Login Page" />
+      </td>
+    </tr>
+     <tr>
+       <td align="center" valign="middle"> 
+        <img width="450px" src="https://res.cloudinary.com/dzasffl7u/image/upload/v1609233044/screencapture-localhost-44319-Reservation-New-7-2020-12-29-11_08_53_wa79mt.png" alt="Booking Page" />
       </td>
     </tr>
   </tbody>
@@ -40,83 +55,40 @@
 
 
 ## Table of Contents
-1. [Application Configurations](https://github.com/Ovardov/Social-Network#application-configurations)
-2. [Technology stack](https://github.com/Ovardov/Social-Network#technology-stack)
-3. [Routing](https://github.com/Ovardov/Social-Network#routing)
-4. [Data API](https://github.com/Ovardov/Social-Network#data-api)
-
-## Application Configurations
-1. Type in the terminal the following in both Server and Client directory:
-```bash
-npm install
-```
-2. Type in the terminal the following in both Server and Client directory:
-```bash
-npm start
-```
-3. Enjoy it!
-
-## Technology stack
-- React.js
-- Express.js
-- Node.js
-- MongoDB
-- SASS
+1. [List of all functionalities](https://github.com/Kerozov/Rent-A-Room#list-of-all-functionalities)
+2. [Routing](https://github.com/Kerozov/Rent-A-Room#routing)
 
 ## List of all functionalities
 1. Register
-2. Login
-3. Logout
-4. Profile Page
-5. Add Post
-6. Edit Post
-7. Delete Post
-8. Like Post
-9. Dislike Post
-10. Add Comment on Post
-11. Edit Comment on Post
-12. Delete Comment on Post
-13. Add Profile Picture
-14. Change Profile Picuture
-15. Add Cover Picture
-16. Change Cover Picture
-17. Add User Info
-17. Search Users
+2. Login with Email
+3. Login with Facebook
+4. Logout
+5. User Settings Page
+6. Change User Password
+7. Add Two Factor Authentication
+8. Add Hotel
+9. Edit Hotel
+10. Delete Hotel
+11. Search Hotels
+12. Rate Hotel
+13. Book Hotel
+14. Add Property Category
+15. Edit Property Category
+16. Delelte Property Category
+
 
 ## Routing
 Route | Description
 ------|------------|
-/ | Public or Private Home page
-/login | Login page
-/register | Register page
-/profile/:username | Profile page
-/search | Search page
-
-## DATA API
-
-###### User
-> - **username**: Username
-> - **password**: Password
-> - **name**: Name
-> - **profilePicture**: Link to cloudinary
-> - **coverPicture**: Link to cloudinary
-> - **posts**: Collection of posts's id
-> - **friends**: Collection of friends's id
-> - **about**: User Bio
-> - **work**: Workplace
-> - **education**: Education
-> - **home**: home
-> - **relationshipStatus**: Relationship Status
-
-###### Post
-> - **author**: Author Id
-> - **date**: Date
-> - **description**: Post description
-> - **image**: Link to cloudinary
-> - **likes**: Collection of users's id
-> - **comments**: Collection of comments's id
-
-###### Comment
-> - **author**: Author Id
-> - **description**: Comment description
-> - **post**: Post Id
+/ | Public Home page
+/Login | Login page
+/Register | Register page
+/SearchHotels | Search hotels page
+/Booking/Add | Create hotel page
+/Booking/Edit/:id | Edit hotel page
+/Booking/Delete/:id | Detele hotel page
+/Booking/ById/:id | Hotel details page
+/Booking/Images/:id | Hotel gallery page
+/Booking/MostPopular | List of best rated hotels
+/Reservation/New/:id | Book hotel page
+/Administration/Categories | Property categories page
