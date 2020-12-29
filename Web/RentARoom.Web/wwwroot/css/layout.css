@@ -7,7 +7,7 @@
 .col-1, .col-2, .col-3 { float:left;}
 
 .aside { float:left; width:236px; margin-right:50px;}
-.content { float:left; width:594px; position:relative;}
+.content { float:left; position:relative;}
 
 /*======= index.html =======*/
 #page1 #content .line-ver { background-position:297px top;}

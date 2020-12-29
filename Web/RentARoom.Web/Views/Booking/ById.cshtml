@@ -53,10 +53,10 @@
                         <div class="wrapper line-ver">
                             <div class="col-1">
                                 <h3>Special Offers</h3>
-                                <ul>
+                                <ul >
                                     @foreach (var service in Model.Services)
                                     {
-                                        <li>
+                                        <li class="custom-service-item">
                                             @service.ServiceName
                                         </li>
                                     }
@@ -71,22 +71,22 @@
                                 </dl>
                             </div>
                             <div class="rating">
-                                <ul class="item-rating">
-                                    <li class="star-fill" data-vote="1"><i class="fas fa-star"></i></li>
-                                    <li class="star-fill" data-vote="2"><i class="fas fa-star"></i></li>
-                                    <li class="star-fill" data-vote="3"><i class="fas fa-star"></i></li>
-                                    <li class="star-fill" data-vote="4"><i class="fas fa-star"></i></li>
-                                    <li class="star-fill" data-vote="5"><i class="fas fa-star"></i></li>
+                                <ul class="item-rating d-flex flex-row">
+                                    <li class="star-fill mx-1 list-unstyled" data-vote="1"><i class="fas fa-star"></i></li>
+                                    <li class="star-fill mx-1" data-vote="2"><i class="fas fa-star"></i></li>
+                                    <li class="star-fill mx-1" data-vote="3"><i class="fas fa-star"></i></li>
+                                    <li class="star-fill mx-1" data-vote="4"><i class="fas fa-star"></i></li>
+                                    <li class="star-fill mx-1" data-vote="5"><i class="fas fa-star"></i></li>
                                     <li><span id="averageVoteValue">@Model.AverageVote.ToString("0.0")</span><span> / 5</span> </li>
                                 </ul>
                             </div>
-                            <div>
+                            <div class="d-flex flex-row">
                                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                                 {
-                                    <a asp-controller="Booking" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                                    <a asp-controller="Booking" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary ">Edit</a>
                                     <form method="post" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id">
                                     </form>
-                                    <button type="submit" class="btn btn-danger" value="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                                    <button  type="submit" class="btn btn-danger mx-4" value="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
                                 }
                             </div>
                         </div>

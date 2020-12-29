@@ -10,11 +10,11 @@
 else
 {
 <form asp-action="List" method="get">
-    <div class="row mb-4">
+    <div class="d-flex flex-row  mb-4">
         @foreach (var service in Model.Services)
         {
             
-            <div class="col-1 text-center">
+            <div class="px-2 text-center">
                 <input id="service_@service.Id"
                        type="checkbox"
                        name="Services"

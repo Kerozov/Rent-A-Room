@@ -3,12 +3,17 @@
 
 <h1 class="mb-4 text-center">@this.ViewData["Title"]</h1>
 
-    <img class="custom-image" src="~/images/hotels/e5b70dfd-b769-48d1-a1d4-cbf9aeac542d.jpg" alt="@Model.Name" />
-@foreach (var image in Model.Images)
-{
+<div class="row">
 
+    @foreach (var image in Model.Images)
+    {
 
-    <img class="custom-image" src="~/images/hotels/@image.Id.@image.Extension" alt="@Model.Name" />
+<div class="col-md-6 col-lg-4 p-3">
+    <div class="component">
+        <div class="card">
 
-
-}
+            <img class="custom-image rounded" src="~/images/hotels/@image.Id.@image.Extension" alt="@Model.Name" />
+        </div>
+    </div>
+</div>}
+</div>
